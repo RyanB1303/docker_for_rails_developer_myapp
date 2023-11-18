@@ -51,6 +51,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem 'rspec-rails', '~> 6.x'
   gem 'capybara', '~> 3.x'
+  gem 'selenium-webdriver', '~> 4.x'
 end
 
 group :development do
