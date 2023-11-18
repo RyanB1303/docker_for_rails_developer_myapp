@@ -24,6 +24,7 @@ RUN apt-get update -yqq && \
 COPY Gemfile* .
 
 RUN bundle install
+RUN yarn install
 
 COPY . .
 
