@@ -23,9 +23,13 @@ RUN apt-get update -yqq && \
 
 COPY Gemfile* .
 
+ENV BUNDLE_PATH /gems
+
 RUN bundle install
 RUN yarn install
 
 COPY . .
+
+ENTRYPOINT ["./dev-docker-entrypoint.sh"]
 
 CMD ["bin/rails", "s", "-b", "0.0.0.0"]
